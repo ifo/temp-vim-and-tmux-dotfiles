@@ -4,7 +4,10 @@ call pathogen#infect()
 call pathogen#helptags()
 
  "turn syntax highlighting on
-syntax on
+syntax enable
+
+"set background=light
+colorscheme github
 
  "line numbers
 set number
@@ -28,12 +31,21 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
+filetype plugin indent on
+
+ "enable automatic folding
+set foldmethod=syntax
+set foldlevelstart=1
+
+let javaScript_fold=1
+let php_folding=1
+
 " only do this if autocommands is enabled
-if has("autocmd")
+"if has("autocmd")
   " enable filetype detection
-  filetype plugin indent on
+"  filetype plugin indent on
 
   " don't expand tabs
-  autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
-endif
+" autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
+"endif
 
