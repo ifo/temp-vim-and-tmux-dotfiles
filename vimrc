@@ -1,4 +1,5 @@
 " Pathogen
+" call pathogen from within the bundle folder
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
