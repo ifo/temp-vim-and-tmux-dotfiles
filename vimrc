@@ -50,3 +50,5 @@ let php_folding=1
 " autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
 "endif
 
+ "make delete work as expected
+set backspace=indent,eol,start 
