@@ -22,6 +22,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'Valloric/YouCompleteMe'
   " vim-scripts
   " non github
 
