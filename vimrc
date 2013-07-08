@@ -25,6 +25,10 @@ set smartindent
   " setting tabs and shift widths - convert tabs to spaces
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 
+  " set tabs and shift widths for python, fix paren length
+au FileType python set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
+let g:pyindent_open_paren = '&sw'
+
   " make two semi-colons escape
 "inoremap ;; <esc>
 
@@ -62,3 +66,6 @@ set backupdir=~/.vimbackups
 
   " setup browser for haskell_doc.vim
 let g:haddock_browser = "open"
+
+  " enable mouse support
+set mouse=a
