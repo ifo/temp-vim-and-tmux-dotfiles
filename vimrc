@@ -1,8 +1,31 @@
+  " Replacing Pathogen with Vundle
   " Pathogen
   " call pathogen from within the bundle folder
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"call pathogen#infect()
+"call pathogen#helptags()
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+  " let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+  " My Bundles:
+  "
+  " github
+Bundle 'scrooloose/nerdtree'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'endel/vim-github-colorscheme'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'lukerandall/haskellmode-vim'
+  " vim-scripts
+  " non github
+
+filetype plugin indent on
 
   " turn syntax highlighting on
 syntax enable
@@ -35,8 +58,6 @@ let g:pyindent_open_paren = '&sw'
   " remove error bells
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
-
-filetype plugin indent on
 
   " enable automatic folding
 set foldmethod=syntax
