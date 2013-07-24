@@ -91,3 +91,6 @@ let g:haddock_browser = "open"
 
   " enable mouse support
 set mouse=a
+
+  " enable clipboard support
+set clipboard=unnamed
