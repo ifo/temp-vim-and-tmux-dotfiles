@@ -31,9 +31,6 @@ filetype plugin indent on
   " turn syntax highlighting on
 syntax enable
 
-  " set background=light
-colorscheme github
-
   " line numbers
 set number
 
