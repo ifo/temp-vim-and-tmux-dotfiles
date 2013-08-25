@@ -23,6 +23,7 @@ Bundle 'endel/vim-github-colorscheme'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'tmhedberg/SimpylFold'
   " vim-scripts
   " non github
 
@@ -49,6 +50,9 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
   " set tabs and shift widths for python, fix paren length
 au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 let g:pyindent_open_paren = '&sw'
+
+  " easier fold toggling
+nnoremap <space> za
 
   " make two semi-colons escape
 "inoremap ;; <esc>
