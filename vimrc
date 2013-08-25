@@ -24,6 +24,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tmhedberg/SimpylFold'
+Bundle 'gkz/vim-ls'
   " vim-scripts
   " non github
 
