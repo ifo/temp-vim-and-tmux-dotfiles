@@ -17,7 +17,7 @@ Bundle 'gmarik/vundle'
   " github
 Bundle 'scrooloose/nerdtree'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
+"Bundle 'pangloss/vim-javascript'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'digitaltoad/vim-jade'
@@ -43,7 +43,7 @@ set cursorline
 set autoindent
 
   " making brackets indent
-set smartindent
+"set smartindent
 
   " setting tabs and shift widths - convert tabs to spaces
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
@@ -64,7 +64,7 @@ au GUIEnter * set vb t_vb=
 
   " enable automatic folding
 set foldmethod=syntax
-set foldlevelstart=1
+set foldlevelstart=30
 
 let javaScript_fold=1
 let php_folding=1
