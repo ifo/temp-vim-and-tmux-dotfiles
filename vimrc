@@ -16,6 +16,7 @@ Bundle 'gmarik/vundle'
   "
   " github
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'pangloss/vim-javascript'
 Bundle 'altercation/vim-colors-solarized'
@@ -98,7 +99,9 @@ set mouse=a
 set clipboard=unnamed
 
   " setup NERDTree hotkey
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeTabsToggle<CR>
+  " and have NERDTree open by default
+"let g:nerdtree_tabs_open_on_console_startup=1
 
   " make tabs easier to navigate
 map <C-l> :tabn<CR>
