@@ -96,3 +96,11 @@ set mouse=a
 
   " enable clipboard support
 set clipboard=unnamed
+
+  " setup NERDTree hotkey
+map <F2> :NERDTreeToggle<CR>
+
+  " make tabs easier to navigate
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+map <C-n> :tabnew<CR>
