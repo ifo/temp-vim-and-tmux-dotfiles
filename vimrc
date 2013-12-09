@@ -23,9 +23,10 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'lukerandall/haskellmode-vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'gkz/vim-ls'
+Bundle 'ervandew/supertab'
   " vim-scripts
   " non github
 
@@ -107,3 +108,7 @@ map <F2> :NERDTreeTabsToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
+
+  " set colorscheme (for solarized)
+"set background=light
+"colorscheme solarized
