@@ -30,10 +30,10 @@ Bundle 'ervandew/supertab'
   " vim-scripts
   " non github
 
-filetype plugin indent on
-
   " turn syntax highlighting on
 syntax enable
+
+filetype plugin indent on
 
   " line numbers
 set number
