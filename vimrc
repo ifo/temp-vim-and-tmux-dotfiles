@@ -24,16 +24,24 @@ Bundle 'endel/vim-github-colorscheme'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'lukerandall/haskellmode-vim'
 "Bundle 'Valloric/YouCompleteMe'
+Bundle 'ervandew/supertab'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'gkz/vim-ls'
-Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/trailing-whitespace'
   " vim-scripts
   " non github
 
   " turn syntax highlighting on
 syntax enable
 
-filetype plugin indent on
+" only do this if autocommands is enabled
+if has("autocmd")
+  " enable filetype detection
+  filetype plugin indent on
+
+  " don't expand tabs
+"  autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
+endif
 
   " line numbers
 set number
@@ -71,17 +79,8 @@ set foldlevelstart=30
 let javaScript_fold=1
 let php_folding=1
 
-  " only do this if autocommands is enabled
-if has("autocmd")
-  " enable filetype detection
-  filetype plugin indent on
-
-  " don't expand tabs
-"  autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
-endif
-
   " make delete work as expected
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
   " make central swap folder
 set directory=~/.vimswaps//
