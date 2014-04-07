@@ -111,3 +111,10 @@ map <C-n> :tabnew<CR>
   " set colorscheme (for solarized)
 "set background=light
 "colorscheme solarized
+
+  " highlight search
+set hlsearch
+
+  " clear search highlight with esc
+
+nnoremap <return> :noh<return><return>
