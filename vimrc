@@ -116,5 +116,8 @@ map <C-n> :tabnew<CR>
 set hlsearch
 
   " clear search highlight with esc
-
 nnoremap <return> :noh<return><return>
+
+  " highlight column number 80
+set colorcolumn=80
+hi ColorColumn ctermbg=lightgrey guibg=lightgrey
