@@ -10,24 +10,38 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
   " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
   " My Bundles:
   "
   " github
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'pangloss/vim-javascript'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'endel/vim-github-colorscheme'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'lukerandall/haskellmode-vim'
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'ervandew/supertab'
-Bundle 'tmhedberg/SimpylFold'
-Bundle 'gkz/vim-ls'
-Bundle 'vim-scripts/trailing-whitespace'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kchmck/vim-coffee-script'
+"Plugin 'pangloss/vim-javascript'
+Plugin 'https://github.com/jelera/vim-javascript-syntax'
+  " colorschemes
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'endel/vim-github-colorscheme'
+"Plugin 'github-theme'
+"Plugin 'google/vim-colorscheme-primary'
+
+Plugin 'digitaltoad/vim-jade'
+Plugin 'lukerandall/haskellmode-vim'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'gkz/vim-ls'
+Plugin 'vim-scripts/trailing-whitespace'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'raichoo/haskell-vim'
+Plugin 'fatih/vim-go'
+ " clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'vim-scripts/paredit.vim'
+" powerline
   " vim-scripts
   " non github
 
@@ -42,6 +56,12 @@ if has("autocmd")
   " don't expand tabs
 "  autocmd Filetype make setlocal ts=4 sts=4 sw=4 noet
 endif
+
+  " rainbow paretheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
   " line numbers
 set number
@@ -83,14 +103,14 @@ let php_folding=1
 set backspace=indent,eol,start
 
   " make central swap folder
-set directory=~/.vimswaps//
+set directory=~/.vim/vimswaps//
 
   " make vim backups in central folder
 set backup
-set backupdir=~/.vimbackups
+set backupdir=~/.vim/vimbackups
 
   " setup browser for haskell_doc.vim
-let g:haddock_browser = "open"
+"let g:haddock_browser = "open"
 
   " enable mouse support
 set mouse=a
@@ -109,8 +129,14 @@ map <C-h> :tabp<CR>
 map <C-n> :tabnew<CR>
 
   " set colorscheme (for solarized)
-"set background=light
+"set background=dark
 "colorscheme solarized
+
+  " set colorscheme
+"colorscheme github
+"set t_Co=256
+"set background=dark
+"colorscheme primary
 
   " highlight search
 set hlsearch
@@ -120,4 +146,5 @@ nnoremap <return> :noh<return><return>
 
   " highlight column number 80
 set colorcolumn=80
-hi ColorColumn ctermbg=lightgrey guibg=lightgrey
+"hi ColorColumn ctermbg=lightgrey guibg=lightgrey
+hi ColorColumn cterm=underline ctermbg=none
